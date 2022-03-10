@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6126748627BE3154005AAA8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6126748327BE3114005AAA8A /* MapKit.framework */; };
+		6126356227D1B7EE003CC9D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126356127D1B7EE003CC9D4 /* LoginViewController.swift */; };
+		6126356927D2008E003CC9D4 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 6126356827D2008E003CC9D4 /* FacebookLogin */; };
 		6126748827BE31F0005AAA8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126748727BE31F0005AAA8A /* MapViewController.swift */; };
 		6126748C27BE54FE005AAA8A /* id_rsa.pub in Resources */ = {isa = PBXBuildFile; fileRef = 6126748B27BE54FE005AAA8A /* id_rsa.pub */; };
+		6147661027D4D9BB00611D11 /* imageRoot3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6147660F27D4D9BB00611D11 /* imageRoot3.jpg */; };
 		618F00A927BDDC50009FB734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F00A827BDDC50009FB734 /* AppDelegate.swift */; };
 		618F00AB27BDDC50009FB734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F00AA27BDDC50009FB734 /* SceneDelegate.swift */; };
 		618F00AD27BDDC50009FB734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F00AC27BDDC50009FB734 /* ViewController.swift */; };
 		618F00B027BDDC50009FB734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F00AE27BDDC50009FB734 /* Main.storyboard */; };
 		618F00B227BDDC52009FB734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618F00B127BDDC52009FB734 /* Assets.xcassets */; };
 		618F00B527BDDC52009FB734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F00B327BDDC52009FB734 /* LaunchScreen.storyboard */; };
+		61CCD0FD27D5AA43003BAF7C /* DriverOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCD0FC27D5AA43003BAF7C /* DriverOrder.swift */; };
+		61CCD10227D5AA4D003BAF7C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCD0FE27D5AA4D003BAF7C /* Meal.swift */; };
+		61CCD10327D5AA4D003BAF7C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCD0FF27D5AA4D003BAF7C /* Restaurant.swift */; };
+		61CCD10427D5AA4D003BAF7C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCD10027D5AA4D003BAF7C /* Cart.swift */; };
+		61CCD10527D5AA4D003BAF7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCD10127D5AA4D003BAF7C /* User.swift */; };
+		61E51BEC27C8A1D900A77221 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6126748327BE3114005AAA8A /* MapKit.framework */; };
+		61E51BF127C8ACB800A77221 /* StateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51BF027C8ACB800A77221 /* StateTableViewController.swift */; };
+		61E51BF327C8ACC300A77221 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51BF227C8ACC300A77221 /* OrderTableViewController.swift */; };
+		61E51BF527C8ACE400A77221 /* PastRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51BF427C8ACE400A77221 /* PastRecordTableViewController.swift */; };
+		61E51BF727C8ACFC00A77221 /* WalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51BF627C8ACFC00A77221 /* WalletTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,9 +43,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6126356127D1B7EE003CC9D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6126356627D1F845003CC9D4 /* roadDasher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = roadDasher.entitlements; sourceTree = "<group>"; };
 		6126748327BE3114005AAA8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6126748727BE31F0005AAA8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6126748B27BE54FE005AAA8A /* id_rsa.pub */ = {isa = PBXFileReference; lastKnownFileType = text; path = id_rsa.pub; sourceTree = "<group>"; };
+		6147660F27D4D9BB00611D11 /* imageRoot3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = imageRoot3.jpg; path = Assets.xcassets/imageRoot3.imageset/imageRoot3.jpg; sourceTree = "<group>"; };
 		618F00A527BDDC50009FB734 /* roadDasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roadDasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F00A827BDDC50009FB734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618F00AA27BDDC50009FB734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +57,15 @@
 		618F00B127BDDC52009FB734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618F00B427BDDC52009FB734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618F00B627BDDC52009FB734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CCD0FC27D5AA43003BAF7C /* DriverOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrder.swift; sourceTree = "<group>"; };
+		61CCD0FE27D5AA4D003BAF7C /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		61CCD0FF27D5AA4D003BAF7C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		61CCD10027D5AA4D003BAF7C /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		61CCD10127D5AA4D003BAF7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		61E51BF027C8ACB800A77221 /* StateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewController.swift; sourceTree = "<group>"; };
+		61E51BF227C8ACC300A77221 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		61E51BF427C8ACE400A77221 /* PastRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordTableViewController.swift; sourceTree = "<group>"; };
+		61E51BF627C8ACFC00A77221 /* WalletTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6126748627BE3154005AAA8A /* MapKit.framework in Frameworks */,
+				6126356927D2008E003CC9D4 /* FacebookLogin in Frameworks */,
+				61E51BEC27C8A1D900A77221 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +102,12 @@
 			children = (
 				618F00AC27BDDC50009FB734 /* ViewController.swift */,
 				6126748727BE31F0005AAA8A /* MapViewController.swift */,
+				61E51BF027C8ACB800A77221 /* StateTableViewController.swift */,
+				61E51BF227C8ACC300A77221 /* OrderTableViewController.swift */,
+				61E51BF427C8ACE400A77221 /* PastRecordTableViewController.swift */,
+				61E51BF627C8ACFC00A77221 /* WalletTableViewController.swift */,
+				6126356127D1B7EE003CC9D4 /* LoginViewController.swift */,
+				61545FF927BDE9F80004F70E /* Model */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,10 +139,13 @@
 		618F00A727BDDC50009FB734 /* roadDasher */ = {
 			isa = PBXGroup;
 			children = (
-				61545FF927BDE9F80004F70E /* Model */,
+				61CCD0F827D5A996003BAF7C /* Model */,
+				6126356627D1F845003CC9D4 /* roadDasher.entitlements */,
+				61D06A5827CDBDC9009A33F4 /* Extensions */,
 				61545FF827BDE9E80004F70E /* Controller */,
 				61545FF627BDE9D70004F70E /* View */,
 				618F00A827BDDC50009FB734 /* AppDelegate.swift */,
+				6147660F27D4D9BB00611D11 /* imageRoot3.jpg */,
 				618F00AA27BDDC50009FB734 /* SceneDelegate.swift */,
 				618F00B127BDDC52009FB734 /* Assets.xcassets */,
 				618F00B327BDDC52009FB734 /* LaunchScreen.storyboard */,
@@ -119,6 +153,41 @@
 				6126748B27BE54FE005AAA8A /* id_rsa.pub */,
 			);
 			path = roadDasher;
+			sourceTree = "<group>";
+		};
+		61CCD0F827D5A996003BAF7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61CCD0FB27D5AA33003BAF7C /* Driver */,
+				61CCD0F927D5AA28003BAF7C /* Customer */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61CCD0F927D5AA28003BAF7C /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				61CCD10027D5AA4D003BAF7C /* Cart.swift */,
+				61CCD0FE27D5AA4D003BAF7C /* Meal.swift */,
+				61CCD0FF27D5AA4D003BAF7C /* Restaurant.swift */,
+				61CCD10127D5AA4D003BAF7C /* User.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		61CCD0FB27D5AA33003BAF7C /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				61CCD0FC27D5AA43003BAF7C /* DriverOrder.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		61D06A5827CDBDC9009A33F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +207,9 @@
 			dependencies = (
 			);
 			name = roadDasher;
+			packageProductDependencies = (
+				6126356827D2008E003CC9D4 /* FacebookLogin */,
+			);
 			productName = roadDasher;
 			productReference = 618F00A527BDDC50009FB734 /* roadDasher.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 618F009C27BDDC50009FB734;
+			packageReferences = (
+				6126356727D2008E003CC9D4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 618F00A627BDDC50009FB734 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6147661027D4D9BB00611D11 /* imageRoot3.jpg in Resources */,
 				618F00B527BDDC52009FB734 /* LaunchScreen.storyboard in Resources */,
 				6126748C27BE54FE005AAA8A /* id_rsa.pub in Resources */,
 				618F00B227BDDC52009FB734 /* Assets.xcassets in Resources */,
@@ -194,10 +270,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CCD0FD27D5AA43003BAF7C /* DriverOrder.swift in Sources */,
+				6126356227D1B7EE003CC9D4 /* LoginViewController.swift in Sources */,
+				61E51BF127C8ACB800A77221 /* StateTableViewController.swift in Sources */,
+				61CCD10427D5AA4D003BAF7C /* Cart.swift in Sources */,
 				618F00AD27BDDC50009FB734 /* ViewController.swift in Sources */,
+				61CCD10227D5AA4D003BAF7C /* Meal.swift in Sources */,
+				61CCD10527D5AA4D003BAF7C /* User.swift in Sources */,
+				61E51BF727C8ACFC00A77221 /* WalletTableViewController.swift in Sources */,
 				618F00A927BDDC50009FB734 /* AppDelegate.swift in Sources */,
 				618F00AB27BDDC50009FB734 /* SceneDelegate.swift in Sources */,
+				61CCD10327D5AA4D003BAF7C /* Restaurant.swift in Sources */,
+				61E51BF327C8ACC300A77221 /* OrderTableViewController.swift in Sources */,
 				6126748827BE31F0005AAA8A /* MapViewController.swift in Sources */,
+				61E51BF527C8ACE400A77221 /* PastRecordTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,25 +430,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = roadDasher/roadDasher.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W5R2Y4WF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = roadDasher/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "取得現在位置以便呈現資訊";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need location to show user's location.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need location to show user's location.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "取得現在位置以便呈現資訊";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "取得現在位置以便呈現資訊";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.roadDasher.HenryLin.roadDasher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadDash.HenryLin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -376,25 +467,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = roadDasher/roadDasher.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W5R2Y4WF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = roadDasher/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "取得現在位置以便呈現資訊";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need location to show user's location.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need location to show user's location.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "取得現在位置以便呈現資訊";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "取得現在位置以便呈現資訊";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.roadDasher.HenryLin.roadDasher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadDash.HenryLin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -425,6 +521,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6126356727D2008E003CC9D4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6126356827D2008E003CC9D4 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6126356727D2008E003CC9D4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 618F009D27BDDC50009FB734 /* Project object */;
 }

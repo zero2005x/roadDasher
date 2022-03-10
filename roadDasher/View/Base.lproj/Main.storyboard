@@ -2,16 +2,49 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xpf-kF-12P">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="KZW-Wy-CoD">
+            <objects>
+                <viewController id="QdI-pd-X2L" customClass="LoginViewController" customModule="roadDasher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PpA-fL-b0W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-hA-t5K" customClass="FBSDKButton" customModule="roadDasher" customModuleProvider="target">
+                                <rect key="frame" x="327" y="831" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="facebookLoginBtn:" destination="QdI-pd-X2L" eventType="touchUpInside" id="O1E-9d-mo0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AmM-8l-t4O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RzZ-hA-t5K" firstAttribute="bottom" secondItem="AmM-8l-t4O" secondAttribute="bottom" id="1Mb-Fr-PCe"/>
+                            <constraint firstItem="AmM-8l-t4O" firstAttribute="trailing" secondItem="RzZ-hA-t5K" secondAttribute="trailing" constant="20" id="7wr-u5-Ez0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="facebookLoginBtn" destination="RzZ-hA-t5K" id="8S5-GN-MmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2b-86-oVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1197" y="15"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9at-Fj-ZKJ">
             <objects>
-                <tabBarController id="xpf-kF-12P" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainVC" id="xpf-kF-12P" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0yU-7x-YW5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,9 +53,9 @@
                     <connections>
                         <segue destination="Zoz-rM-aKI" kind="relationship" relationship="viewControllers" id="SeO-st-0SV"/>
                         <segue destination="guk-UB-oXF" kind="relationship" relationship="viewControllers" id="ua7-JN-Xa6"/>
+                        <segue destination="cj8-Cl-W56" kind="relationship" relationship="viewControllers" id="4gZ-V7-Qun"/>
                         <segue destination="ZPX-cI-M22" kind="relationship" relationship="viewControllers" id="wH0-OX-poc"/>
                         <segue destination="Cqz-Oa-nKh" kind="relationship" relationship="viewControllers" id="MvO-VM-FNe"/>
-                        <segue destination="cj8-Cl-W56" kind="relationship" relationship="viewControllers" id="4gZ-V7-Qun"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1C-XM-KzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -32,13 +65,13 @@
         <!--訂單-->
         <scene sceneID="DgL-yg-nmR">
             <objects>
-                <tableViewController id="ove-Rs-yFc" sceneMemberID="viewController">
+                <tableViewController id="ove-Rs-yFc" customClass="OrderTableViewController" customModule="roadDasher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Bc4-n3-blU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nwU-HF-HHj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderCell" id="nwU-HF-HHj">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nwU-HF-HHj" id="bss-xj-Kzd">
@@ -54,7 +87,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="訂單" id="xNl-mG-zk7">
-                        <barButtonItem key="leftBarButtonItem" image="tablecells" catalog="system" style="plain" id="WNK-tG-eyh"/>
+                        <barButtonItem key="leftBarButtonItem" title="listButton" image="menu" id="WNK-tG-eyh"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -86,13 +119,13 @@
         <!--過往紀錄-->
         <scene sceneID="Sg3-hW-r1n">
             <objects>
-                <tableViewController id="itE-zJ-1hg" sceneMemberID="viewController">
+                <tableViewController id="itE-zJ-1hg" customClass="PastRecordTableViewController" customModule="roadDasher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qgc-cg-NbV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qIe-fg-bKL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pastRecordCell" id="qIe-fg-bKL">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qIe-fg-bKL" id="zkf-JM-oO7">
@@ -107,8 +140,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="過往紀錄" id="beM-4d-87F">
-                        <barButtonItem key="leftBarButtonItem" image="tablecells" catalog="system" id="DpK-fx-iup"/>
-                        <barButtonItem key="rightBarButtonItem" image="calendar" catalog="system" id="fCe-oq-Ztq"/>
+                        <barButtonItem key="leftBarButtonItem" title="listButton" image="menu" id="DpK-fx-iup"/>
+                        <barButtonItem key="rightBarButtonItem" title="Date" image="calendar" catalog="system" id="fCe-oq-Ztq"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhA-XX-UJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -127,12 +160,19 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUx-42-qpa" userLabel="showLocationBtnPressed">
-                                <rect key="frame" x="345.5" y="698" width="43.5" height="75"/>
+                                <rect key="frame" x="339" y="723" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="XeC-1g-q3J"/>
+                                    <constraint firstAttribute="width" constant="50" id="0XW-9D-mms"/>
+                                    <constraint firstAttribute="height" constant="50" id="XeC-1g-q3J"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="mappin.and.ellipse" catalog="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" image="mappin.and.ellipse" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                    <color key="titleShadowColor" systemColor="systemGroupedBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
                                 <connections>
                                     <action selector="showLocationBtnPressed:" destination="ITP-EX-IDJ" eventType="touchUpInside" id="4eZ-lq-RUP"/>
                                 </connections>
@@ -151,7 +191,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="地圖" id="wrS-iN-G8k">
-                        <barButtonItem key="leftBarButtonItem" image="tablecells" catalog="system" id="6nR-MD-OAL"/>
+                        <barButtonItem key="leftBarButtonItem" title="listButton" image="menu" id="6nR-MD-OAL"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="dI4-p3-4qt" id="qsL-Xu-RJa"/>
@@ -186,13 +226,13 @@
         <!--錢包-->
         <scene sceneID="qtp-Ah-IKT">
             <objects>
-                <tableViewController id="LHX-81-eea" sceneMemberID="viewController">
+                <tableViewController id="LHX-81-eea" customClass="WalletTableViewController" customModule="roadDasher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="d0W-eD-LnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AZf-ue-U1o">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="walletCell" id="AZf-ue-U1o">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZf-ue-U1o" id="hB4-rr-RJD">
@@ -207,7 +247,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="錢包" id="34z-XO-564">
-                        <barButtonItem key="leftBarButtonItem" image="tablecells" catalog="system" id="ZCq-fj-wqY"/>
+                        <barButtonItem key="leftBarButtonItem" title="listButton" image="menu" id="ZCq-fj-wqY"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4t-td-eTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,13 +278,13 @@
         <!--狀態-->
         <scene sceneID="rZh-BA-CAf">
             <objects>
-                <tableViewController id="HDu-Ap-2Vw" sceneMemberID="viewController">
+                <tableViewController id="HDu-Ap-2Vw" customClass="StateTableViewController" customModule="roadDasher" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BVu-d5-tBb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sWQ-X8-NCU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" id="sWQ-X8-NCU">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sWQ-X8-NCU" id="27N-Rm-IJ8">
@@ -259,7 +299,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="狀態" id="KKD-hK-5Ok">
-                        <barButtonItem key="leftBarButtonItem" image="tablecells" catalog="system" id="AT0-fV-flH"/>
+                        <barButtonItem key="leftBarButtonItem" title="listButton" image="menu" id="AT0-fV-flH"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2M-et-dzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -310,9 +350,18 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
-        <image name="tablecells" catalog="system" width="128" height="93"/>
+        <image name="menu" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

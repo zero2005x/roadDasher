@@ -9,26 +9,29 @@ import UIKit
 import CoreLocation
 import MapKit
 import CoreData
-class MapViewController: UIViewController {
+
+
+class MapViewController: UIViewController{
     var manager: CLLocationManager = CLLocationManager()
     var latitude: Double = 25.03407286999999
     var longitude: Double = 121.54360960999996
+    
+   
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var showLocationBtnPressed: UIButton!
     
     
-    
     @IBAction func showLocationBtnPressed(_ sender: Any) {
         
-       
-      
-
+        
+        
+        
         mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated: true)
         
         
         print("Start Showing and Reporting my location")
-
+        
         
     }
     
@@ -42,11 +45,14 @@ class MapViewController: UIViewController {
         self.longitude = fetchLocation.coordinate.longitude
         print("Lat: \( self.latitude) Lon:\(self.longitude)")
         
+        mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated: true)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLocationBtnPressed.contentVerticalAlignment = .fill
+        showLocationBtnPressed.contentHorizontalAlignment = .fill
         
-       
         manager.requestWhenInUseAuthorization()
         manager.requestAlwaysAuthorization()
         manager.allowsBackgroundLocationUpdates = true
@@ -59,15 +65,19 @@ class MapViewController: UIViewController {
         manager.pausesLocationUpdatesAutomatically = false
         
         
-       
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       
+        
         
        
     }
+    @IBAction func showRightView(_ sender: Any){
+      
+    }
     
+   
     /*
      // MARK: - Navigation
      
